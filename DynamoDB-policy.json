@@ -17,7 +17,7 @@
                 "dynamodb:GetRecords"
             ],
             "Resource": [
-                "arn:aws:dynamodb:*:233030971807:table/Inventory_Ec2_Instances",
+                "arn:aws:dynamodb:*:233030971807:table/DYNAMODBTABLE",
                 "arn:aws:dynamodb:*:*:table/*/stream/*"
             ]
         },
