@@ -44,7 +44,7 @@ def Inventory_Ec2_Instance_RDS(table_name='Inventory_Ec2_Instances', table_data=
         #write data into our table
         for item in table_data:
             writer.put_item(Item=item)
-    print('done')
+    
         
 def Inventory_Ec2_Instance_Xls_S3(keys=keys, bucket_name='ec2-inventory-boa', table_data=Get_Ec2_Instance_Info()):
     '''
@@ -72,7 +72,7 @@ def Inventory_Ec2_Instance_Xls_S3(keys=keys, bucket_name='ec2-inventory-boa', ta
             writer.writerow(data)
     #upload the csv file into the s3 bucket and make it public read 
     s3.Object(bucket_name, filename).upload_file('/tmp/'+filename, ExtraArgs={'ACL':'public-read'})
-    print('done')
+    
 
 def lambda_handler(event, context):
     Inventory_Ec2_Instance_RDS()
