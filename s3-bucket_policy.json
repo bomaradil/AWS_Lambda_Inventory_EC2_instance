@@ -12,7 +12,7 @@
                 "s3:PutObjectVersionAcl",
                 "s3:PutObjectAcl"
             ],
-            "Resource": "arn:aws:s3:::ec2-inventory-boa/*"
+            "Resource": "arn:aws:s3:::S3-BUCKET/*"
         }
     ]
 }
